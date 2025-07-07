@@ -1,7 +1,4 @@
-
-
 <template>
-  <a href="https://webapp.zhaopin.com/2025/bf/bjczt0606ZL85165/23.%E4%BF%9D%E5%AF%86%E5%8A%9E-%E4%B8%BB%E4%BB%BB-%E5%B2%97%E4%BD%8D%E8%AF%B4%E6%98%8E%E4%B9%A6%EF%BC%88%E5%85%AC%E5%BC%80%EF%BC%89.pdf">ZHAOPIN.COM</a>
   <div class="wrapper">
     <countDown targetDate="2049-10-01T00:00:00" :isShow=isShow @update:isShow="isShow = $event">
       展示内容
