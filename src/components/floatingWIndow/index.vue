@@ -1,5 +1,5 @@
 <template>
-    <div class="floating-box" 
+    <div class="floating-box"
     ref="floatingBoxRef"
     :style="{width:`${width}px`,height:`${height}px`,top: `${position.y}px`, left: `${position.x}px` }"
     @mouseenter="pauseAnimation"
@@ -7,6 +7,7 @@
     >
         <img v-if="imgSrc" :src="imgSrc" alt="" style="width:100%;height:100%;object-fit:cover">
     </div>
+
 </template>
 
 <script setup lang='ts'>
@@ -26,7 +27,7 @@ const props = defineProps({
     },
     speedY:{
         type:Number,
-        default:2, 
+        default:2,
     },
     imgSrc:{
         type:String,
@@ -69,7 +70,7 @@ const pauseAnimation = () => {
 
 const resumeAnimation = () => {
     isPaused.value = false;
-    
+
 }
 
 const handleResize = () => {
@@ -79,7 +80,7 @@ const handleResize = () => {
 
 onMounted(() => {
    window.addEventListener('resize',handleResize);
-   updatePosition(); 
+   updatePosition();
 })
 
 onUnmounted(() => {
@@ -94,7 +95,7 @@ onUnmounted(() => {
 .floating-box{
   position:fixed;
   z-index:999;
-  background-color:red;     
+  background-color:red;
   cursor:pointer;
 }
 
